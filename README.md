@@ -45,18 +45,28 @@ run the commands provided:
 # Practice 1: GitHub Collaboration
 ## Part 1: Add Collaborators
 
-1. Create a **GitHub repository** for the calculator project.
-2. **Invite your teammates** as repository collaborators.
-3. Ask each collaborator to **clone the repository**.
-4. **Verify** that everyone can **access** the project.
+1. **Invite your teammates** as repository collaborators (Team of 2 to 3).
+
+![1](imgs/invite_collaborators.png)
+
+2. Ask each collaborator to **clone the repository**.
+```bash
+git clone <your repo url>
+```
+
+3. **Verify** that everyone can **access** the project.
 
 ## Part 2: Protect Main Branch
 
-1. Open your repository's **Settings**.
-2. Navigate to **Rules** → **Rulesets**
-3. Create a rule for the **main branch**.
-4. **Require pull requests** before merging changes.
-5. **Require approvals** and passing status checks before merging.
+1. Open your repository's **Settings** → **Rules** → **Rulesets**
+
+![1](imgs/rulset_page.png)
+
+3. Create a rule for the **main branch**: 
+- **Require pull requests** before merging changes.
+- **Require approvals** and passing status checks before merging.
+
+![1](imgs/pritect_main.png) ![1](imgs/add_main_branch.png) ![1](imgs/branches_added.png) ![1](imgs/restrict_pull_request.png) 
 
 ## Part 3: Open a Pull Requests
 
@@ -76,11 +86,22 @@ git checkout -b feature
 ```
 5. Open a **pull request** on GitHub: Describe the change and explain how you tested it.
 
+![1](imgs/open_pull_request.png) 
+
 ## Part 4: Review the Pull Request
 1. Assign another student to **review your pull request**.
 2. **Review** the code changes.
+
+![1](imgs/review_code.png)
+
 3. Leave a **comment** or suggest an improvement.
+
+![1](imgs/pull_request_view.png)
+
 4. **Approve** the pull request.
+
+![1](imgs/approve_pull_request.png)
+
 5. **Merge the pull request** after the required checks pass.
 
 ## Part 6: Resolve Conflicts
