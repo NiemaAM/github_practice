@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/NiemaAM/github_practice#readme",
   "devDependencies": {
-    "jest": "^30.5.2"
+    "jest": "^25.0.0"
   }
 }
