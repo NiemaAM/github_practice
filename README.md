@@ -10,7 +10,7 @@ This project is a simple web calculator, use it to practice Github collaboration
 # Setup:
 ## 0. Open new window on VsCode then git bash (terminal if on mac or linux)
 
-![0](imgs/open_new_window.png) ![0](imgs/open_terminal.png) ![0](imgs/open_git_bash.png) ![0](imgs/git_bash.png) 
+![0](imgs/open_new_window.png) ![0](imgs/open_terminal.png) ![0](imgs/open_git_bash.png) ![0](imgs/git_bash.png)  
 
 ## 1. create a local repo and innitialize it
 ```bash
