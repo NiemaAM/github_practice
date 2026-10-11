@@ -18,17 +18,17 @@ mkdir github_practice
 cd github_practice
 git init
 ```
-## 2. clone this repo
-```bash
-git clone https://github.com/NiemaAM/github_practice.git
-```
+
+open folder in new window (crtl + click)
+![0](imgs/open_folder.png)
+
 ## 3. create a repote Github repo
 
 got to: Repositories > [new](https://github.com/new) and create a **private** repository.
 
 ![0](imgs/create_new_repo.png)
 
-## 4. add all files
+## 4. past the files in this repo to your local repo and add all files
 ```bash
 git add .
 ```
