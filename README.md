@@ -128,6 +128,19 @@ you should see:
 ```bash
 added 278 packages, and audited 279 packages in 25s
 ```
+and have [package-lock.json](package-lock.json) and [node_modules](node_modules) created on the root, like this:
+``` text
+github_practice/
+├── imgs/
+├── node_modules/
+├── src/
+├── test/
+├── .gitignore
+├── CI_CD_STARTER.txt
+├── package-lock.json
+├── package.json
+└── README.md
+```
 
 ### 4. run unit tests:
 ```bash
@@ -162,55 +175,54 @@ Snapshots:   0 total
 Time:        0.793 s
 Ran all test suites.
 ```
-## Part 2: Github Actions
-1. Create a CI_CD.yml file:
+
+## Part 3: Continus Integration
+
+1. create a [CI.yaml](.github/wordkflow/CI.yml) file:
 ``` text
 github_practice/
 ├── .github/
     └── workflows/
-        └── CI_CD.yml
+        └── CI.yml
 ```
-your repo should be looking like this:
+your local repo should be looking like this:
 ``` text
 github_practice/
 ├── .github/
 │   └── workflows/
-│       └── CI_CD.yml
+│       └── CI.yml
+├── imgs/
+├── node_modules/
 ├── src/
 │   ├── view.html
 │   └── calculator.js
 ├── test/
 │   └── calculator.test.js
-├── package.json
+├── .gitignore
+├── CI_CD_STARTER.txt
 ├── package-lock.json
+├── package.json
 └── README.md
 ```
-
-2. use the [CI_CD_STARTED.txt](CI_CD_STARTED.txt) as a template
-
-## Part 3: Continus Integration
-
-1. create a [CI_CD.yaml](.github/wordkflow/CI_CD.yml) file:
 > if your brache name is master, replace main with 'master'
 ``` yaml
+name: Calculator CI
+
 on:
-  # Run tests on pushes and pull requests
   push:
     branches:
-      - main #master
+      - main # or master
 
   pull_request:
     branches:
-      - main #master
+      - main # or master
 
-  # Allow manual execution
   workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  # Continuous Integration
   test:
     name: Run Unit Tests
     runs-on: ubuntu-latest
@@ -231,26 +243,48 @@ jobs:
       - name: Run Jest tests
         run: npm test
 ```
-2. Make sure the calculator works locally.
+2. Make sure the calculator works locally: open [view.html](src/view.html) in your browser.
+
+![0](imgs/calculator_html.png)
+
 3. commit and push you code:
 ```bash
 git add .github/workflows/CI_CD.yml
-git commit -m "CI: trigger workflow on main" #master
-git push origin main #master
+git commit -m "CI: trigger workflow on main" # or master
+git push origin main # or master
 ```
 4. Confirm that the CI workflow passes.
 
+![1](imgs/CI_pass_check.png) ![2](imgs/CI_pass_check2.png)
+
+> if the test does not pass try npm upgarde and push again, or verify that your main branch name is correct (can be main or master) 
+
 ## Part 4: Continus Deployement
-1. in you [CI_CD.yaml](.github/wordkflow/CI_CD.yml) file add at the end of the file:
+1. create a [CD.yaml](.github/wordkflow/CD.yml) file:
+``` text
+github_practice/
+├── .github/
+    └── workflows/
+        ├── CI.yml
+        └── CD.yml
+```
+1. in you [CD.yaml](.github/wordkflow/CD.yml) file add at the end of the file:
 ```yml
-  # Continuous Deployment
+name: Calculator CD
+
+on:
+  push:
+    branches:
+      - main # or master
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
   deploy:
     name: Deploy to GitHub Pages
-    needs: test
-
-    # Deploy only after a push to main or manual run.
-    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
-
     runs-on: ubuntu-latest
 
     permissions:
