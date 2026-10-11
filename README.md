@@ -7,11 +7,40 @@ This project is a simple web calculator, use it to practice Github collaboration
 - unit tests: [claculator.test.js](test/calculator.test.js)
 - actions template: [CI_CD_STARTED.txt](CI_CD_STARTED.txt)
 
-## Clone this repo
+# Setup:
+## 0. Open new window on VsCode then git bash (terminal if on mac or linux)
 
+![0](imgs/open_new_window.png) ![0](imgs/open_terminal.png) ![0](imgs/open_git_bash.png) ![0](imgs/git_bash.png) 
+
+## 1. create a local repo and innitialize it
+```bash
+mkdir github_practice
+cd github_practice
+git init
+```
+## 2. clone this repo
 ```bash
 git clone https://github.com/NiemaAM/github_practice.git
 ```
+## 3. create a repote Github repo
+
+got to: Repositories > [new](https://github.com/new) and create a **private** repository.
+
+![0](imgs/create_new_repo.png)
+
+## 4. add all files
+```bash
+git add .
+```
+## 5. commit the added files
+```bash
+git commit -m "innitial commit"
+```
+## 6. connect remote repo with local repo
+
+run the commands provided:
+
+![0](imgs/connect_remote_repo.png)
 
 # Practice 1: GitHub Collaboration
 ## Part 1: Add Collaborators
@@ -249,7 +278,7 @@ jobs:
 
 3. commit and push you code:
 ```bash
-git add .github/workflows/CI_CD.yml
+git add .github/workflows/CI.yml
 git commit -m "CI: trigger workflow on main" # or master
 git push origin main # or master
 ```
@@ -323,6 +352,15 @@ jobs:
 ![3](imgs/enable_github_page.png)
 
 3. commit and push you code
-4. observe the CD running on Github
-5. Deploy the HTML, CSS, and browser-side JavaScript files (vercel).
-6. Open the published website (vercel) and test the calculator.
+```bash
+git add .github/workflows/CD.yml
+git commit -m "CD: trigger deployment on main" # or master
+git push origin main # or master
+```
+4. Confirm that the CD workflow passes.
+
+![4](imgs/CD_pass_check.png) ![5](imgs/CD_pass_check2.png)
+
+6. Open the published website and test the calculator.
+
+![5](imgs/CD_pass_check3.png)
