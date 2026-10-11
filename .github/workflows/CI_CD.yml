@@ -2,11 +2,11 @@ on:
   # Run tests on pushes and pull requests
   push:
     branches:
-      - main
+      - master
 
   pull_request:
     branches:
-      - main
+      - master
 
   # Allow manual execution
   workflow_dispatch:
