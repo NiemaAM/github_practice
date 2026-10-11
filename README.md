@@ -7,6 +7,12 @@ This project is a simple web calculator, use it to practice Github collaboration
 - unit tests: [claculator.test.js](test/calculator.test.js)
 - actions template: [CI_CD_STARTED.txt](CI_CD_STARTED.txt)
 
+## Clone this repo
+
+```bash
+git clone https://github.com/NiemaAM/github_practice.git
+```
+
 # Practice 1: GitHub Collaboration
 ## Part 1: Add Collaborators
 
@@ -95,7 +101,7 @@ Wrote to github_practice\package.json:
 
 ### 2. Update the package.json file:
 
-change to **"scripts": {"test": "jest"},**
+change [package.json](package.json) to add **"scripts": {"test": "jest"},**
 ```bash
 {
   "name": "github_practice",

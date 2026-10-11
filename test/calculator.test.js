@@ -3,7 +3,7 @@ const {
     subtract,
     multiply,
     divide
-} = require("./calculator");
+} = require("../src/calculator");
 
 describe("Calculator - Addition", () => {
     test("adds two positive numbers", () => {
