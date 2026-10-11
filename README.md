@@ -319,6 +319,9 @@ jobs:
         uses: actions/deploy-pages@v4
 ```
 2. Enable GitHub Pages in the repository settings.
+
+![3](imgs/enable_github_page.png)
+
 3. commit and push you code
 4. observe the CD running on Github
 5. Deploy the HTML, CSS, and browser-side JavaScript files (vercel).
