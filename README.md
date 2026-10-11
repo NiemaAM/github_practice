@@ -3,11 +3,23 @@
 This project is a simple web calculator, use it to practice Github collaboration, testing and actions.
 
 - front-end: [view.html](src/view.html)
-- controler: [calculator.js](src/calculator.js)
+- controller: [calculator.js](src/calculator.js)
 - unit tests: [claculator.test.js](test/calculator.test.js)
 - actions template: [CI_CD_STARTED.txt](CI_CD_STARTED.txt)
 
 # Setup:
+## install node.js if not installed yet:
+- download from: [nodejs website](https://nodejs.org/)
+- verify that it is installed correctly:
+```bash
+node -v
+npm -v
+```
+you should see something like:
+```bash
+v24.11.1
+```
+
 ## 0. Open new window on VsCode then git bash (terminal if on mac or linux)
 
 ![0](imgs/open_new_window.png) ![0](imgs/open_terminal.png) ![0](imgs/open_git_bash.png) ![0](imgs/git_bash.png)  
