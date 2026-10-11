@@ -191,16 +191,17 @@ github_practice/
 ## Part 3: Continus Integration
 
 1. create a [CI_CD.yaml](.github/wordkflow/CI_CD.yml) file:
+> if your brache name is master, replace main with 'master'
 ``` yaml
 on:
   # Run tests on pushes and pull requests
   push:
     branches:
-      - main
+      - main #master
 
   pull_request:
     branches:
-      - main
+      - main #master
 
   # Allow manual execution
   workflow_dispatch:
@@ -231,9 +232,13 @@ jobs:
         run: npm test
 ```
 2. Make sure the calculator works locally.
-3. commit and push you code
-4. observe the CI running on Github
-5. Confirm that the CI workflow passes.
+3. commit and push you code:
+```bash
+git add .github/workflows/CI_CD.yml
+git commit -m "CI: trigger workflow on main" #master
+git push origin main #master
+```
+4. Confirm that the CI workflow passes.
 
 ## Part 4: Continus Deployement
 1. in you [CI_CD.yaml](.github/wordkflow/CI_CD.yml) file add at the end of the file:
