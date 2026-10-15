@@ -90,17 +90,17 @@ git clone YOUR_REPO_URL_HERE
 ```bash
 git checkout -b feature
 ```
-2. Make a **change**: add you name in the [view.html](src/view.html) file.
+2. Make a **change**: add you name in the README.md file.
 3. **Stage** and **commit** your changes:
 ```bash
    git add .
-   git commit -m "UI: added name to view"
+   git commit -m "added my name"
 ```
 4. **Push** your branch:
 ```bash
    git push -u origin feature
 ```
-5. Open a **pull request** on GitHub: Describe the change and explain how you tested it.
+5. Open a **pull request** on GitHub: Describe the change.
 
 ![1](imgs/open_pull_request.png) 
 
@@ -110,7 +110,7 @@ git checkout -b feature
 
 ![1](imgs/review_code.png)
 
-3. Leave a **comment** or suggest an improvement.
+3. Leave a **comment** on the pull request.
 
 ![1](imgs/pull_request_view.png)
 
@@ -124,18 +124,17 @@ git checkout -b feature
 1. Modify the **same line** in separate branches.
 2. **Merge the first** branch.
 ```bash
-git checkout main
-git pull origin main
-git checkout feature/my-change
-git merge main
+git checkout main # or master
+git pull origin main # or master
+git checkout feature/YOUR_NAME_HERE
+git merge main # or master
 ```
 3. **Update the second branch** with the latest changes from main.
 4. **Resolve the conflict** in your editor.
-5. **Commit** the resolution and complete the pull request.
+5. add the changes and **Commit** the resolution.
 ```bash
 git add .
 git commit -m "fix: resolve merge conflict"
-git push
 ```
 
 
