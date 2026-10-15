@@ -22,6 +22,7 @@ you should see something like:
 
 KEEP THIS TERMINAL OPEN
 MAKE SURE TO NAVIGATE TO YOUR WORKING DIRECTORY USING cd C:/path_to_your_folder_here DURING PRACTICE
+YOU WILL BE RUNNING ALL THE npm COMMANDS IN THIS TERMINAL and the git commands in the git bash inside vscode (or terminal in vscode if you have MAC)
 
 ![0](imgs/npm_working.png)
 
@@ -40,13 +41,9 @@ MAKE SURE TO NAVIGATE TO YOUR WORKING DIRECTORY USING cd C:/path_to_your_folder_
 
 got to: Repositories > [new](https://github.com/new) and create a **public** repository.
 
-![0](imgs/create_new_repo.png)
+![0](imgs/create_colab_repo.png)
 
-> make sure your repo is public with no readme file or template
-
-![0](imgs/public_repo.png)
-
-### 4. create and **innitialize** the local repo, **add** all the files and commit
+### 4. create and **innitialize** the local repo (with the same name as the one you created on Github), **add** all the files and commit
 
 > run in git bash
 
@@ -60,26 +57,19 @@ git commit -m "innitial commit"
 
 ![0](imgs/repo_init.png)
 
-### 5. connect remote repo with local repo
-
-run the commands provided by **Github** when you created a new repo:
-
-![0](imgs/connect_remote_repo.png)
-
-> if your branch name is "master" intead of "main", make sure to always change the branch name when needed in this practice
-
-![0](imgs/branch_name.png)
 
 ## Part 1: Add Collaborators
 
-1. **Invite your teammates** as repository collaborators (Team of 2 to 3).
+1. **Invite your teammates** as repository collaborators by email (Team of 2 to 3).
 
 ![1](imgs/invite_collaborators.png)
 
-2. Ask each collaborator to **clone the repository**.
+ACCEPT THE INVITATION RECEIVED BY EMAIL
+
+2. OPEN A NEW WINDOW IN VSCODE (File>new Window) AND OPEN A FOLDER OF YOUR CHOICE (Open folder) THEN clone the repository by running "git clone" followed by YOUR GITHUB REPO URL in GITBASH (NOT POWERSHELL OR COMMAND PROMPT)
 
 ```bash
-git clone <your repo url>
+git clone YOUR_REPO_URL_HERE
 ```
 
 ## Part 2: Protect Main Branch
