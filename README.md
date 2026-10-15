@@ -20,40 +20,23 @@ npm -v
 ```
 you should see something like:
 
+KEEP THIS TERMINAL OPEN
+MAKE SURE TO NAVIGATE TO YOUR WORKING DIRECTORY USING cd C:/path_to_your_folder_here DURING PRACTICE
+
 ![0](imgs/npm_working.png)
 
-## 1. Download the zip from this repo
+============================================
+============================================
 
-![0](imgs/download_zip.png)
+# **WAIT FOR THIS PART**
+**PRACTICE 1**
 
-uzip the file:
+============================================
+============================================
 
-![0](imgs/unzip.png) ![0](imgs/unzip2.png)
-
-## 2. Open new window on VsCode
-
-![0](imgs/open_new_window.png)
-
-Open the unzipped folder on VsCode
-
-![0](imgs/open_folder_vscode.png)
-
-Open terminal (Ctrl+J)
-
-> you should see your folder open on the left side like in the image
-
-![0](imgs/open_terminal.png) 
-
-Open Git bash:
-
-![0](imgs/open_git_bash.png) 
-
-> you should see that you are located in the github_practive_master folder
-
-![0](imgs/git_bash.png)  
-
-
-## 3. create a repote Github repo
+# Practice 1: GitHub Collaboration
+## Setup:
+### 3. create a repote Github repo (Project Manager ONLY!)
 
 got to: Repositories > [new](https://github.com/new) and create a **public** repository.
 
@@ -63,7 +46,7 @@ got to: Repositories > [new](https://github.com/new) and create a **public** rep
 
 ![0](imgs/public_repo.png)
 
-## 4. **innitialize** the repo, **add** all the files and commit
+### 4. create and **innitialize** the local repo, **add** all the files and commit
 
 > run in git bash
 
@@ -77,7 +60,7 @@ git commit -m "innitial commit"
 
 ![0](imgs/repo_init.png)
 
-## 5. connect remote repo with local repo
+### 5. connect remote repo with local repo
 
 run the commands provided by **Github** when you created a new repo:
 
@@ -87,8 +70,6 @@ run the commands provided by **Github** when you created a new repo:
 
 ![0](imgs/branch_name.png)
 
-
-# Practice 1: GitHub Collaboration
 ## Part 1: Add Collaborators
 
 1. **Invite your teammates** as repository collaborators (Team of 2 to 3).
@@ -167,7 +148,85 @@ git commit -m "fix: resolve merge conflict"
 git push
 ```
 
+
+============================================
+============================================
+
+# **WAIT FOR THIS PART**
+**PRACTICE 2**
+
+============================================
+============================================
+
+
 # Practice 2: GitHub Automation
+## Setup:
+### 1. Download the zip from this repo like shown in the screenshot
+
+![0](imgs/download_zip.png)
+
+uzip the file:
+
+![0](imgs/unzip.png) ![0](imgs/unzip2.png)
+
+### 2. Open new window on VsCode
+
+![0](imgs/open_new_window.png)
+
+Open the unzipped folder on VsCode
+
+![0](imgs/open_folder_vscode.png)
+
+Open terminal (Ctrl+J)
+
+> you should see your folder open on the left side like in the image
+
+![0](imgs/open_terminal.png) 
+
+Open Git bash:
+
+![0](imgs/open_git_bash.png) 
+
+> you should see that you are located in the github_practive_master folder
+
+![0](imgs/git_bash.png)  
+
+
+### 3. create another repote Github repo
+
+got to: Repositories > [new](https://github.com/new) and create a **public** repository.
+
+![0](imgs/create_new_repo.png)
+
+> make sure your repo is public with no readme file or template
+
+![0](imgs/public_repo.png)
+
+### 4. **innitialize** the repo, **add** all the files and commit
+
+> run in git bash
+
+```bash
+git init
+git add .
+git commit -m "innitial commit"
+```
+
+> you should see all the commands runing
+
+![0](imgs/repo_init.png)
+
+### 5. connect remote repo with local repo
+
+run the commands provided by **Github** when you created a new repo:
+
+![0](imgs/connect_remote_repo.png)
+
+> if your branch name is "master" intead of "main", make sure to always change the branch name when needed in this practice
+
+![0](imgs/branch_name.png)
+
+
 ## Part 1: Unit testing
 ### 1. create a package.json file:
 
@@ -283,6 +342,15 @@ github_practice/
 > if your brache name is **'master'**, replace **'main'** with **'master'**
 
 copy this into the file:
+
+============================================
+============================================
+
+# **CI.yml**
+
+============================================
+============================================
+
 ``` yaml
 name: Calculator CI
 
@@ -355,6 +423,15 @@ github_practice/
 > if your brache name is **'master'**, replace **'main'** with **'master'**
 
 copy this into the file:
+
+============================================
+============================================
+
+# **CD.yml**
+
+============================================
+============================================
+
 ```yml
 name: Calculator CD
 
